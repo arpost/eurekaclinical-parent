@@ -8,12 +8,12 @@
     <name>Eureka! Clinical Parent</name>
     <description>Parent pom.xml for all Eureka! Clinical projects.</description>
     <inceptionYear>2015</inceptionYear>
-    <url>https://github.com/eurekaclinical/eurekaclinical-parent.git</url>
+    <url>https://github.com/arpost/eurekaclinical-parent.git</url>
     
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -28,91 +28,49 @@
     </properties>
     
     <organization>
-        <name>Emory University</name>
-        <url>http://www.emory.edu</url>
+        <name>Andrew Post</name>
+        <url>http://www.andrewrpost.com</url>
     </organization>
     
     <scm>
-        <connection>scm:git:https://github.com/eurekaclinical/eurekaclinical-parent.git</connection>
-        <developerConnection>scm:git:https://github.com/eurekaclinical/eurekaclinical-parent.git</developerConnection>
-        <url>https://github.com/eurekaclinical/eurekaclinical-parent.git</url>
+        <connection>scm:git:https://github.com/arpost/eurekaclinical-parent.git</connection>
+        <developerConnection>scm:git:https://github.com/arpost/eurekaclinical-parent.git</developerConnection>
+        <url>https://github.com/arpost/eurekaclinical-parent.git</url>
         <tag>HEAD</tag>
     </scm>
     
     <!-- Both repositories are password protected for deploys. -->
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/arpost/${project.name}</url>
         </repository>
     </distributionManagement>
     <repositories>
         <repository>
-            <id>java.net-Public</id>
-            <name>Maven Java Net Snapshots and Releases</name>
-            <url>https://maven.java.net/content/groups/public/</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
             <id>jboss-releases</id>
             <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
         </repository>
-        <repository>
-            <id>oracleReleases</id>
-            <name>Oracle Released Java Packages</name>
-            <url>http://download.oracle.com/maven</url>
-            <layout>default</layout>
-        </repository>
+<!--        <repository>-->
+<!--            <id>oracleReleases</id>-->
+<!--            <name>Oracle Released Java Packages</name>-->
+<!--            <url>http://download.oracle.com/maven</url>-->
+<!--            <layout>default</layout>-->
+<!--        </repository>-->
     </repositories>
     <pluginRepositories>
-        <pluginRepository>
-            <id>java.net-Public</id>
-            <name>Maven Java Net Snapshots and Releases</name>
-            <url>https://maven.java.net/content/groups/public/</url>
-            <layout>default</layout>
-        </pluginRepository>
-        <pluginRepository>
-            <id>jboss-releases</id>
-            <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
-        </pluginRepository>
     </pluginRepositories>
     
     <developers>
         <developer>
-            <id>arpost</id>
+            <id>andrew.post55</id>
             <name>Andrew Post</name>
-            <email>arpost@emory.edu</email>
+            <email>andrew.post55@gmail.com</email>
             <roles>
-                <role>Faculty Project Lead</role>
+                <role>Developer</role>
             </roles>
             <organization>
-                Department of Biomedical Informatics, Emory University
-            </organization>
-        </developer>
-        <developer>
-            <id>mai</id>
-            <name>Miao Ai</name>
-            <email>miao.ai@emory.edu</email>
-            <roles>
-                <role>Systems Software Engineer (Contractor)</role>
-            </roles>
-            <organization>
-                Department of Biomedical Informatics, Emory University
-            </organization>
-        </developer>
-        <developer>
-            <id>nita.deshpande</id>
-            <name>Nita Deshpande</name>
-            <email>nita.deshpande@emory.edu</email>
-            <roles>
-                <role>Senior Systems Software Engineer (Contractor)</role>
-            </roles>
-            <organization>
-                Department of Biomedical Informatics, Emory University
+                andrewrpost.com
             </organization>
         </developer>
     </developers>
@@ -397,6 +355,19 @@
                         <phase>test</phase>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                        <version>2.3.3</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.sun.xml.bind</groupId>
+                        <artifactId>jaxb-ri</artifactId>
+                        <version>2.3.3</version>
+                        <type>zip</type>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
