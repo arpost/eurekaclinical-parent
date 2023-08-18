@@ -315,6 +315,9 @@
                         <phase>test</phase>
                     </execution>
                 </executions>
+                <configuration>
+                    <noticeTemplate>etc/NOTICE.template</noticeTemplate>
+                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>jakarta.xml.bind</groupId>

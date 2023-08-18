@@ -1,5 +1,7 @@
 # Eureka! Clinical Parent pom.xml
-[Georgia Clinical and Translational Science Alliance (Georgia CTSA)](http://www.georgiactsa.org), [Emory University](http://www.emory.edu), Atlanta, GA
+[Andrew Post](http://www.andrewrpost.com), Salt Lake City, UT
+
+Derived from software developed at [Georgia Clinical and Translational Science Alliance (Georgia CTSA)](http://www.georgiactsa.org), [Emory University](http://www.emory.edu), Atlanta, GA
 
 # What does it do?
 It is the parent pom used by all projects in the eurekaclinical organization. It specifies the following sections, so you can omit them in the pom of any Eureka! Clinical project:
@@ -104,4 +106,4 @@ The Eureka! Clinical project releases its artifacts to Maven Central. If you are
 Note that the Nexus staging plugin is configured with `autoReleaseAfterClose` set to `false`, which causes the Maven release plugin to release the artifact to Maven central's password protected staging repository.
 
 ## Getting help
-Feel free to contact us at help@eurekaclinical.org.
+Feel free to contact the author at andrew.post55@gmail.com.
