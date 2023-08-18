@@ -24,7 +24,7 @@
         <liquibase-version>3.6.3</liquibase-version>
         <!-- Don't upgrade h2 yet. There is a bug causing ORDER BY to be
         ignored in SELECT queries with a WHERE clause. -->
-        <h2-version>2.1.210</h2-version>
+        <h2-version>2.2.220</h2-version>
     </properties>
     
     <organization>
